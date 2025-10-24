@@ -1,0 +1,676 @@
+{
+  "doctype": "DocType",
+  "name": "Job",
+  "module": "Freight Management",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "is_submittable": 1,
+  "autoname": "format:JOB-{YYYY}-{#####}",
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "job_no",
+      "label": "Job No",
+      "fieldtype": "Data",
+      "read_only": 1
+    },
+    {
+      "fieldname": "date",
+      "label": "Date",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trak_no",
+      "label": "Trak#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "br",
+      "label": "Br",
+      "fieldtype": "Data",
+      "in_list_view": 0
+    },
+    {
+      "fieldname": "division",
+      "label": "Div",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Open\nIn Progress\nCompleted\nBilled\nCancelled"
+    },
+    {
+      "fieldname": "type",
+      "label": "Type",
+      "fieldtype": "Select",
+      "options": "Import\nExport\nCross Trade"
+    },
+    {
+      "fieldname": "mode",
+      "label": "Mode",
+      "fieldtype": "Select",
+      "options": "Sea\nAir\nLand"
+    },
+    {
+      "fieldname": "console",
+      "label": "Console",
+      "fieldtype": "Select",
+      "options": "LCL\nFCL\nBreak Bulk"
+    },
+    {
+      "fieldname": "service",
+      "label": "Service",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "mbl_no",
+      "label": "MBL#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "business_party",
+      "label": "Business Party",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "sales_ex",
+      "label": "Sales Ex.",
+      "fieldtype": "Link",
+      "options": "Employee"
+    },
+    {
+      "fieldname": "commodity",
+      "label": "Commodity",
+      "fieldtype": "Link",
+      "options": "Item Group"
+    },
+    {
+      "fieldname": "cargo_type",
+      "label": "Cargo Type",
+      "fieldtype": "Select",
+      "options": "Containerized\nBulk\nLiquid"
+    },
+    {
+      "fieldname": "imco",
+      "label": "Imco",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "load_port",
+      "label": "Load Port",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "origin",
+      "label": "Origin",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "destin",
+      "label": "Destin",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "route",
+      "label": "Route",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "final",
+      "label": "Final",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "clear",
+      "label": "Clear",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "stage",
+      "label": "Stage",
+      "fieldtype": "Select",
+      "options": "Booking\nIn Transit\nDelivered\nClosed"
+    },
+    {
+      "fieldname": "place",
+      "label": "Place",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "point",
+      "label": "Point",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "weight",
+      "label": "Weight",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "cbm",
+      "label": "CBM",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "wm_cbm",
+      "label": "W/M(CBM)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "pkgs",
+      "label": "Pkgs",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "General"
+    },
+    {
+      "fieldname": "documentation_completed_on",
+      "label": "Documentation Completed on",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "project",
+      "label": "Project",
+      "fieldtype": "Link",
+      "options": "Project"
+    },
+    {
+      "fieldname": "hbl_no",
+      "label": "HBL#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "issue_port",
+      "label": "Issue Port",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "issue_date",
+      "label": "Issue Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "release_type",
+      "label": "Release Type",
+      "fieldtype": "Select",
+      "options": "Bank\nDirect\nOther"
+    },
+    {
+      "fieldname": "issued_by",
+      "label": "Issued By",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "finalized",
+      "label": "Finalized",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "released",
+      "label": "Released",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "as_agent_of",
+      "label": "As Agent of",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "coload",
+      "label": "Co-Load",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "coload_bl",
+      "label": "Co-Load BL#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "coload_agent",
+      "label": "Co-Load Agent",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "container_info",
+      "label": "Container (Header)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "container_count",
+      "label": "#",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "seal_no_hdr",
+      "label": "Seal No",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "refrigerated",
+      "label": "Refrigerated",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "temperature",
+      "label": "Temperature",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "tare_wt",
+      "label": "Tare Wt",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "freight_payment",
+      "label": "Freight Payment",
+      "fieldtype": "Select",
+      "options": "Prepaid\nCollect"
+    },
+    {
+      "fieldname": "other_charges",
+      "label": "Other Charges",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "transship_mode",
+      "label": "Transship Mode",
+      "fieldtype": "Select",
+      "options": "Direct\nTransshipment"
+    },
+    {
+      "fieldname": "nominated",
+      "label": "Nominated",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "booking_ref",
+      "label": "Booking#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "load_ref",
+      "label": "Load#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "quotation_ref",
+      "label": "Quotation#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "stuff_ref",
+      "label": "Stuff#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "created_user",
+      "label": "Created User",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "modified_user",
+      "label": "Modified User",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "custodian",
+      "label": "Custodian",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "Cargo"
+    },
+    {
+      "fieldname": "cargo_description",
+      "label": "Description",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "special_instruction",
+      "label": "Special Instruction",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "cargo_select",
+      "label": "Cargo",
+      "fieldtype": "Select",
+      "options": "FCL\nLCL\nBreak Bulk"
+    },
+    {
+      "fieldname": "store",
+      "label": "Store",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "slac",
+      "label": "Slac",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "manifest_no",
+      "label": "Manifest#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "pages",
+      "label": "Pages",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "po_ref",
+      "label": "PO Reference#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "expected_date",
+      "label": "Expected Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "received_date",
+      "label": "Received Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "doc_receipt_date",
+      "label": "Doc Receipt Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "document_type",
+      "label": "Document Type",
+      "fieldtype": "Select",
+      "options": "Invoice\nPacking List\nCO\nOthers"
+    },
+    {
+      "fieldname": "req_delivery_date",
+      "label": "Req. Delivery Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "can_received_date",
+      "label": "CAN Received Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "declaration_received_date",
+      "label": "Declaration Received Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "clearance_date",
+      "label": "Clearance Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "delivery_date",
+      "label": "Delivery Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "ready_date",
+      "label": "Ready Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "warehouse_date",
+      "label": "Warehouse Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "offloaded_date",
+      "label": "Offloaded Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "pickup_date",
+      "label": "Pickup Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "loaded_date",
+      "label": "Loaded Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "handover_date",
+      "label": "Handover Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "insurance_value",
+      "label": "Insurance Value",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "declared_value",
+      "label": "Declared Value",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "customs_value",
+      "label": "Customs Value",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "delivery_address",
+      "label": "Delivery Address",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "doc_received_by",
+      "label": "Doc Received By",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "offloaded_by",
+      "label": "Offloaded By",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "dn_no",
+      "label": "DN#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "Party"
+    },
+    {
+      "fieldname": "shipper",
+      "label": "Shipper",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "consignee",
+      "label": "Consignee",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "notify1",
+      "label": "Notify1",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "notify2",
+      "label": "Notify2",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "notify3",
+      "label": "Notify3",
+      "fieldtype": "Link",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "agent",
+      "label": "Agent",
+      "fieldtype": "Link",
+      "options": "Supplier"
+    },
+    {
+      "fieldname": "do_party",
+      "label": "DO Party",
+      "fieldtype": "Link",
+      "options": "Supplier"
+    },
+    {
+      "fieldname": "original",
+      "label": "Original",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "o_shpr",
+      "label": "O Shpr",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "o_cnne",
+      "label": "O Cnne",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "o_bl",
+      "label": "O BL#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "o_vessel",
+      "label": "O Vessel",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "o_voyage",
+      "label": "O Voyage",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "Carrier"
+    },
+    {
+      "fieldname": "carrier_name",
+      "label": "Carrier Name",
+      "fieldtype": "Link",
+      "options": "Supplier"
+    },
+    {
+      "fieldname": "carrier_booking",
+      "label": "Booking#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "vessel_name",
+      "label": "Vessel Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "voyage_no",
+      "label": "Voyage#",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "etd",
+      "label": "ETD",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "eta",
+      "label": "ETA",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "pol",
+      "label": "POL",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "pod",
+      "label": "POD",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "freight_terms",
+      "label": "Freight Terms",
+      "fieldtype": "Select",
+      "options": "Prepaid\nCollect"
+    },
+    {
+      "fieldname": "carrier_remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "Container"
+    },
+    {
+      "fieldname": "container",
+      "label": "Container",
+      "fieldtype": "Table",
+      "options": "Job Container"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "Item"
+    },
+    {
+      "fieldname": "items",
+      "label": "Items",
+      "fieldtype": "Table",
+      "options": "Job Item"
+    },
+    {
+      "fieldtype": "Section Break",
+      "label": "Costing"
+    },
+    {
+      "fieldname": "costing",
+      "label": "Costing",
+      "fieldtype": "Table",
+      "options": "Job Costing"
+    },
+    {
+      "fieldname": "total_cost",
+      "label": "Total Cost",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "total_sales",
+      "label": "Total Sales",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "provisional_profit",
+      "label": "Prov. Profit",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "gross_profit",
+      "label": "Gross Profit",
+      "fieldtype": "Currency"
+    }
+  ]
+}
