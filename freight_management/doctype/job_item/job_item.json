@@ -1,0 +1,59 @@
+{
+  "doctype": "DocType",
+  "name": "Job Item",
+  "module": "Freight Management",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "item_description",
+      "label": "Item Description",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "hs_code",
+      "label": "HS Code",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "qty",
+      "label": "Qty",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "default": 1
+    },
+    {
+      "fieldname": "uom",
+      "label": "UOM",
+      "fieldtype": "Link",
+      "options": "UOM",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "weight",
+      "label": "Weight",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "cbm",
+      "label": "CBM",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "declared_value",
+      "label": "Declared Value",
+      "fieldtype": "Currency",
+      "options": "Company:default_currency"
+    },
+    {
+      "fieldname": "invoice_no",
+      "label": "Invoice#",
+      "fieldtype": "Data"
+    }
+  ]
+}

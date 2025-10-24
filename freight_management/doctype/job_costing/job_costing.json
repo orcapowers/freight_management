@@ -1,0 +1,132 @@
+{
+  "doctype": "DocType",
+  "name": "Job Costing",
+  "module": "Freight Management",
+  "custom": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "fields": [
+    {
+      "fieldname": "sr_no",
+      "label": "S#",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "width": 60
+    },
+    {
+      "fieldname": "element",
+      "label": "Element",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "reqd": 1,
+      "width": 150
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "width": 200
+    },
+    {
+      "fieldname": "uom",
+      "label": "UOM",
+      "fieldtype": "Link",
+      "options": "UOM",
+      "in_list_view": 1,
+      "width": 90
+    },
+    {
+      "fieldname": "qty",
+      "label": "Qty",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "width": 80,
+      "default": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "CUR",
+      "fieldtype": "Link",
+      "options": "Currency",
+      "in_list_view": 1,
+      "width": 70,
+      "default": "QAR"
+    },
+    {
+      "fieldname": "exchange_rate",
+      "label": "ExRT",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "width": 80,
+      "default": 1
+    },
+    {
+      "fieldname": "cost_rate",
+      "label": "Cost Rate",
+      "fieldtype": "Currency",
+      "options": "currency",
+      "width": 120
+    },
+    {
+      "fieldname": "cost_fc",
+      "label": "Cost FC",
+      "fieldtype": "Currency",
+      "options": "currency",
+      "in_list_view": 1,
+      "width": 120
+    },
+    {
+      "fieldname": "pay_party",
+      "label": "Pay Party",
+      "fieldtype": "Link",
+      "options": "Supplier",
+      "width": 160
+    },
+    {
+      "fieldname": "sales_currency",
+      "label": "Sales CUR",
+      "fieldtype": "Link",
+      "options": "Currency",
+      "width": 90,
+      "default": "QAR"
+    },
+    {
+      "fieldname": "sales_rate",
+      "label": "Sales Rate",
+      "fieldtype": "Currency",
+      "options": "sales_currency",
+      "width": 120
+    },
+    {
+      "fieldname": "sales_fc",
+      "label": "Sales FC",
+      "fieldtype": "Currency",
+      "options": "sales_currency",
+      "in_list_view": 1,
+      "width": 120
+    },
+    {
+      "fieldname": "cost_booked",
+      "label": "Cost Bkd",
+      "fieldtype": "Currency",
+      "options": "currency",
+      "width": 120
+    },
+    {
+      "fieldname": "invoice_booked",
+      "label": "Inv. Bkd",
+      "fieldtype": "Currency",
+      "options": "sales_currency",
+      "width": 120
+    },
+    {
+      "fieldname": "payable",
+      "label": "P",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "width": 40
+    }
+  ]
+}
